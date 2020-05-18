@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=
+SOURCEFILES_QUOTED_IF_SPACED=Programa_principal.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=
-POSSIBLE_DEPFILES=
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Programa_principal.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Programa_principal.o.d
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES=${OBJECTDIR}/Programa_principal.o
 
 # Source Files
-SOURCEFILES=
+SOURCEFILES=Programa_principal.asm
 
 
 
@@ -95,7 +95,23 @@ MP_LINKER_DEBUG_OPTION=-r=ROM@0x7DC0:0x7FFF -r=RAM@GPR:0x3F4:0x3FF
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/Programa_principal.o: Programa_principal.asm  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Programa_principal.o.d 
+	@${RM} ${OBJECTDIR}/Programa_principal.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Programa_principal.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_PK3=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Programa_principal.lst\" -e\"${OBJECTDIR}/Programa_principal.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Programa_principal.o\" \"Programa_principal.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/Programa_principal.o"
+	@${FIXDEPS} "${OBJECTDIR}/Programa_principal.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	
 else
+${OBJECTDIR}/Programa_principal.o: Programa_principal.asm  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Programa_principal.o.d 
+	@${RM} ${OBJECTDIR}/Programa_principal.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Programa_principal.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Programa_principal.lst\" -e\"${OBJECTDIR}/Programa_principal.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Programa_principal.o\" \"Programa_principal.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/Programa_principal.o"
+	@${FIXDEPS} "${OBJECTDIR}/Programa_principal.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	
 endif
 
 # ------------------------------------------------------------------------------------
