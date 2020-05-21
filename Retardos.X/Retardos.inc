@@ -29,7 +29,7 @@ Retardo_400ms
  
 ; 5ms 
 Retardo_20ms
-    MOVLW   D'200'; 1cy -> k
+    MOVLW   D'199'; 1cy -> k
     GOTO    Retardos_ms ; 2cy 
  
 ; 5ms 

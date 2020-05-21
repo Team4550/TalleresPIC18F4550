@@ -1,0 +1,101 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Wed May 20 16:09:09 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_2       code   0x000020    program   0x000134
+                   .org_1       code   0x000200    program   0x000022
+.config_300000_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300000    program   0x000001
+.config_300001_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300001    program   0x000001
+.config_300002_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300002    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300005    program   0x000001
+.config_300006_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300006    program   0x000001
+.config_300008_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300008    program   0x000001
+.config_300009_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300009    program   0x000001
+.config_30000A_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000a    program   0x000001
+.config_30000B_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000b    program   0x000001
+.config_30000C_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000c    program   0x000001
+.config_30000D_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000020    0x000153      
+                            0x000200    0x000221      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            360 out of 33048 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    BUCLE   0x000116    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              BUCLE_milis   0x0000e6    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                    Bucle   0x000148    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                  DISPLAY   0x000200    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+                   INICIO   0x000020    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+            Retardo_100us   0x000124    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_10us   0x000138    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_1ms   0x0000f6    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_1us   0x000150    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_200us   0x000102    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_20ms   0x0000d4    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_20us   0x000132    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_300us   0x000108    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_400ms   0x000082    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_500us   0x00010e    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_50us   0x00012c    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_5ms   0x0000da    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_5us   0x000140    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+           Retardo_Micros   0x000112    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_Milis   0x0000e2    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+           Retardo_micros   0x000146    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                 Retardos   0x000110    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardos_ms   0x0000e0    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                   SEGUIR   0x00006e    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+                 SEGUIR_2   0x00005e    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+                    START   0x00002c    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000020    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+                    START   0x00002c    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+                 SEGUIR_2   0x00005e    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+                   SEGUIR   0x00006e    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+            Retardo_400ms   0x000082    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_20ms   0x0000d4    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_5ms   0x0000da    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardos_ms   0x0000e0    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_Milis   0x0000e2    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              BUCLE_milis   0x0000e6    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_1ms   0x0000f6    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_200us   0x000102    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_300us   0x000108    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_500us   0x00010e    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                 Retardos   0x000110    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+           Retardo_Micros   0x000112    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                    BUCLE   0x000116    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+            Retardo_100us   0x000124    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_50us   0x00012c    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_20us   0x000132    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+             Retardo_10us   0x000138    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_5us   0x000140    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+           Retardo_micros   0x000146    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                    Bucle   0x000148    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+              Retardo_1us   0x000150    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Retardos.inc
+                  DISPLAY   0x000200    program     static D:\Electronica\4550\Taller-Pic18f4550\Display.X\Programa_principal.asm
+
+

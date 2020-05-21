@@ -86,7 +86,7 @@ INICIO
 ; 1TCY = 1 * 200NS = 200nS
 START
   BSF	LATD,0
-  CALL	Retardo_5us;2TCY = 400ns  
+  CALL	Retardo_20ms;2TCY = 400ns  
   BCF	LATD,0
   CALL	Retardo_5us;2TCY 
   

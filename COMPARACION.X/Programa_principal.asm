@@ -89,18 +89,19 @@ START
   MOVF	PORTB,W
   CPFSEQ    VALOR,W
   GOTO	    MAYOR
-  BSF	    LATD,0
+  BSF	    LAT,0
   BCF	    LATD,1
   GOTO	    START
 MAYOR
-  CPFSGT    VALOR,W
+  CPFSGT    VALOR,W; VALOR < W 
   GOTO	    MENOR
-  BSF	    LATD,1
+  BSF	    LATD,2
+  BCF	    LATD,1
   BCF	    LATD,0
   GOTO	    START
 MENOR
-    BSF	    LATD,2
-    BCF	    LATD,1
+    BCF	    LATD,2
+    BSF	    LATD,1
     BCF	    LATD,0
 
   END

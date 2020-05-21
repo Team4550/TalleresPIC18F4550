@@ -1,4 +1,4 @@
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  1
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00033 
                       00034 ; CONFIG4L
                       00035   CONFIG  STVREN = OFF          ; Stack Full/Underflow Reset Enable bit (Stack full/underflow will not c
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  2
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ Warning[205]: Found directive in column 1. (ENDC)
                       00073   
                       00074   ORG   0; DIRECCION 0
 000000 EF?? F???      00075   GOTO  INICIO
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  3
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -142,18 +142,19 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 000022 928C           00093   BCF       LATD,1
 000024 EF?? F???      00094   GOTO      START
 000028                00095 MAYOR
-000028 6400           00096   CPFSGT    VALOR,W
+000028 6400           00096   CPFSGT    VALOR,W; VALOR < W 
 00002A EF?? F???      00097   GOTO      MENOR
-00002E 828C           00098   BSF       LATD,1
-000030 908C           00099   BCF       LATD,0
-000032 EF?? F???      00100   GOTO      START
-000036                00101 MENOR
-000036 848C           00102     BSF     LATD,2
-000038 928C           00103     BCF     LATD,1
-00003A 908C           00104     BCF     LATD,0
-                      00105 
-                      00106   END
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  4
+00002E 848C           00098   BSF       LATD,2
+000030 928C           00099   BCF       LATD,1
+000032 908C           00100   BCF       LATD,0
+000034 EF?? F???      00101   GOTO      START
+000038                00102 MENOR
+000038 948C           00103     BCF     LATD,2
+00003A 828C           00104     BSF     LATD,1
+00003C 908C           00105     BCF     LATD,0
+                      00106 
+                      00107   END
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  4
 
 
 SYMBOL TABLE
@@ -212,7 +213,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  5
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  5
 
 
 SYMBOL TABLE
@@ -271,7 +272,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  6
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  6
 
 
 SYMBOL TABLE
@@ -330,7 +331,7 @@ EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
 ENDP1                             00000004
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  7
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  7
 
 
 SYMBOL TABLE
@@ -389,7 +390,7 @@ HLVDL3                            00000003
 I2C_DAT                           00000005
 I2C_READ                          00000002
 I2C_START                         00000003
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  8
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  8
 
 
 SYMBOL TABLE
@@ -448,7 +449,7 @@ LATA5                             00000005
 LATA6                             00000006
 LATB                              00000F8A
 LATB0                             00000000
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE  9
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE  9
 
 
 SYMBOL TABLE
@@ -495,7 +496,7 @@ LVV1                              00000001
 LVV2                              00000002
 LVV3                              00000003
 MAYOR                             00000028
-MENOR                             00000036
+MENOR                             00000038
 N                                 00000004
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
@@ -507,7 +508,7 @@ NOT_POR                           00000001
 NOT_RBPU                          00000007
 NOT_RI                            00000004
 NOT_T1SYNC                        00000002
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 10
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 10
 
 
 SYMBOL TABLE
@@ -566,7 +567,7 @@ PLUSW2                            00000FDB
 POR                               00000001
 PORTA                             00000F80
 PORTB                             00000F81
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 11
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 11
 
 
 SYMBOL TABLE
@@ -625,7 +626,7 @@ RC4                               00000004
 RC5                               00000005
 RC6                               00000006
 RC7                               00000007
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 12
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 12
 
 
 SYMBOL TABLE
@@ -684,7 +685,7 @@ SPP0                              00000000
 SPP1                              00000001
 SPP2                              00000002
 SPP3                              00000003
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 13
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 13
 
 
 SYMBOL TABLE
@@ -743,7 +744,7 @@ T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
 T0IP                              00000002
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 14
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 14
 
 
 SYMBOL TABLE
@@ -802,7 +803,7 @@ TMR2IF                            00000001
 TMR2IP                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 15
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 15
 
 
 SYMBOL TABLE
@@ -861,7 +862,7 @@ TRISE0                            00000000
 TRISE1                            00000001
 TRISE2                            00000002
 TRMT                              00000001
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 16
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 16
 
 
 SYMBOL TABLE
@@ -920,7 +921,7 @@ URSTIF                            00000000
 USBEN                             00000003
 USBIE                             00000005
 USBIF                             00000005
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 17
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 17
 
 
 SYMBOL TABLE
@@ -979,7 +980,7 @@ _CP1_ON_5L                        000000FD
 _CP2_OFF_5L                       000000FF
 _CP2_ON_5L                        000000FB
 _CP3_OFF_5L                       000000FF
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 18
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 18
 
 
 SYMBOL TABLE
@@ -1038,7 +1039,7 @@ _LPT1OSC_OFF_3H                   000000FB
 _LPT1OSC_ON_3H                    000000FF
 _LVP_OFF_4L                       000000FB
 _LVP_ON_4L                        000000FF
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 19
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 19
 
 
 SYMBOL TABLE
@@ -1097,7 +1098,7 @@ _WRTC_ON_6H                       000000DF
 _WRTD_OFF_6H                      000000FF
 _WRTD_ON_6H                       0000007F
 _XINST_OFF_4L                     000000BF
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  15:44:54         PAGE 20
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  15:11:14         PAGE 20
 
 
 SYMBOL TABLE

@@ -1,4 +1,4 @@
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  1
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00033 
                       00034 ; CONFIG4L
                       00035   CONFIG  STVREN = OFF          ; Stack Full/Underflow Reset Enable bit (Stack full/underflow will not c
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  2
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ Warning[205]: Found directive in column 1. (ENDC)
                       00073   
                       00074   ORG   0; DIRECCION 0
 000000 EF?? F???      00075   GOTO  INICIO
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  3
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -135,7 +135,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00086 ; 1TCY = 1 * 200NS = 200nS
 000014                00087 START
 000014 808C           00088   BSF   LATD,0
-000016 EC?? F???      00089   CALL  Retardo_5us;2TCY = 400ns  
+000016 EC?? F???      00089   CALL  Retardo_20ms;2TCY = 400ns  
 00001A 908C           00090   BCF   LATD,0
 00001C EC?? F???      00091   CALL  Retardo_5us;2TCY 
                       00092   
@@ -173,9 +173,9 @@ Warning[205]: Found directive in column 1. (ENDC)
                       00029  
                       00030 ; 5ms 
 000072                00031 Retardo_20ms
-000072 0EC8           00032     MOVLW   D'200'; 1cy -> k
+000072 0EC7           00032     MOVLW   D'199'; 1cy -> k
 000074 EF?? F???      00033     GOTO    Retardos_ms ; 2cy 
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  4
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  4
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -234,7 +234,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00084 
                       00085     
                       00086     
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  5
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  5
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -287,7 +287,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00131 
                       00094   
                       00095   END
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  6
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  6
 
 
 SYMBOL TABLE
@@ -346,7 +346,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  7
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  7
 
 
 SYMBOL TABLE
@@ -405,7 +405,7 @@ CLKCFG1                           00000007
 CM0                               00000000
 CM1                               00000001
 CM2                               00000002
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  8
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  8
 
 
 SYMBOL TABLE
@@ -464,7 +464,7 @@ EEADR                             00000FA9
 EECON1                            00000FA6
 EECON2                            00000FA7
 EEDATA                            00000FA8
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE  9
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE  9
 
 
 SYMBOL TABLE
@@ -523,7 +523,7 @@ HLVDIF                            00000002
 HLVDIN                            00000005
 HLVDIP                            00000002
 HLVDL0                            00000000
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 10
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 10
 
 
 SYMBOL TABLE
@@ -582,7 +582,7 @@ LATA                              00000F89
 LATA0                             00000000
 LATA1                             00000001
 LATA2                             00000002
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 11
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 11
 
 
 SYMBOL TABLE
@@ -641,7 +641,7 @@ NOT_BOR                           00000000
 NOT_DONE                          00000001
 NOT_IPEN                          00000007
 NOT_PD                            00000002
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 12
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 12
 
 
 SYMBOL TABLE
@@ -700,7 +700,7 @@ PIR2                              00000FA1
 PKTDIS                            00000004
 PLUSW0                            00000FEB
 PLUSW1                            00000FE3
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 13
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 13
 
 
 SYMBOL TABLE
@@ -759,7 +759,7 @@ RBPU                              00000007
 RC0                               00000000
 RC1                               00000001
 RC2                               00000002
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 14
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 14
 
 
 SYMBOL TABLE
@@ -818,7 +818,7 @@ Retardo_50us                      000000CA
 Retardo_5ms                       00000078
 Retardo_5us                       000000DE
 Retardo_Micros                    000000B0
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 15
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 15
 
 
 SYMBOL TABLE
@@ -877,7 +877,7 @@ SSPOV                             00000006
 SSPSTAT                           00000FC7
 STALLIE                           00000005
 STALLIF                           00000005
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 16
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 16
 
 
 SYMBOL TABLE
@@ -936,7 +936,7 @@ TABLAT                            00000FF5
 TBLPTR                            00000FF6
 TBLPTRH                           00000FF7
 TBLPTRL                           00000FF6
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 17
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 17
 
 
 SYMBOL TABLE
@@ -995,7 +995,7 @@ TRISB2                            00000002
 TRISB3                            00000003
 TRISB4                            00000004
 TRISB5                            00000005
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 18
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 18
 
 
 SYMBOL TABLE
@@ -1054,7 +1054,7 @@ UEP12                             00000F7C
 UEP13                             00000F7D
 UEP14                             00000F7E
 UEP15                             00000F7F
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 19
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 19
 
 
 SYMBOL TABLE
@@ -1113,7 +1113,7 @@ _BOR_OFF_2L                       000000F9
 _BOR_ON_2L                        000000FF
 _BOR_ON_ACTIVE_2L                 000000FD
 _BOR_SOFT_2L                      000000FB
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 20
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 20
 
 
 SYMBOL TABLE
@@ -1172,7 +1172,7 @@ _FOSC_EC_EC_1H                    000000F5
 _FOSC_HSPLL_HS_1H                 000000FE
 _FOSC_HS_1H                       000000FC
 _FOSC_INTOSCIO_EC_1H              000000F8
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 21
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 21
 
 
 SYMBOL TABLE
@@ -1231,7 +1231,7 @@ _WDTPS_32768_2H                   000000FF
 _WDTPS_32_2H                      000000EB
 _WDTPS_4096_2H                    000000F9
 _WDTPS_4_2H                       000000E5
-MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-19-2020  16:12:24         PAGE 22
+MPASM 5.84            PROGRAMA_PRINCIPAL.ASM   5-20-2020  11:07:39         PAGE 22
 
 
 SYMBOL TABLE
