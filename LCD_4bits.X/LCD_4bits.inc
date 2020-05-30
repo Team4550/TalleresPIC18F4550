@@ -1,0 +1,141 @@
+;RS E y RW
+#define RS LATC,0
+#DEFINE E   LATC,1
+
+CBLOCK 0X00
+   DATO_LCD 
+   LCD_GUARDAR
+   VARIABLE_CUENTA
+ENDC
+    
+LCD_INIT:
+    BCF	    TRISC,0; RS SALIDA
+    BCF	    TRISC,1; E SALIDA
+    CLRF    TRISD; PUERTO D SALIDA
+    CALL    Retardo_1ms
+    MOVLW   0X30; 0X30 -> W
+    CALL    LCD_COMANDO
+    CALL    Retardo_1ms
+    CALL    Retardo_1ms
+    CALL    Retardo_1ms
+    CALL    Retardo_1ms
+    MOVLW   0X30
+    CALL    LCD_COMANDO
+    CALL    Retardo_1ms
+    MOVLW   0X30
+    CALL    LCD_COMANDO
+    MOVLW   0X20; 4 BITS
+    CALL    LCD_COMANDO
+    CALL    LCD_2LINEAS
+    CALL    LCD_DISPLAY_ON
+    CALL    LCD_BORRAR
+    CALL    LCD_INCR
+    RETURN
+LCD_INCR
+    MOVLW   0X06
+    GOTO    LCD_CONFIG
+LCD_BORRAR
+    MOVLW   0X01
+    GOTO    LCD_CONFIG
+LCD_DISPLAY_ON
+    MOVLW   0X0C
+    GOTO    LCD_CONFIG
+LCD_2LINEAS
+    MOVLW   0X28; 2 LINEAS 5X8
+    GOTO    LCD_CONFIG
+LCD_CONFIG:
+    ;W = 0X28 
+    MOVWF   LCD_GUARDAR; = 0X28
+    MOVF    LCD_GUARDAR,W;
+    CALL    LCD_COMANDO
+    SWAPF   LCD_GUARDAR,W;
+    ; 0X28
+    ; SWAPF 0X82
+    ; W = 0X82
+    CALL    LCD_COMANDO
+    RETURN
+    
+LCD_COMANDO
+    BCF	    RS; COMANDO
+    ; w = 0x28
+    ; W = 0X82
+    ANDLW   B'11110000';		
+    ;         00101000
+    ;	 W =  00100000
+    MOVWF   DATO_LCD
+    MOVF    LATD,W; PUERTO D -> W
+    ; RD7       RD0
+    ; 0100 1111
+    ;W =      11001010
+    ANDLW   B'00001111';
+    ;0	    ;00001010
+    IORWF   DATO_LCD,W; 
+    ;W = 00001010 OR
+    ;DL  00110000
+    ;W = 00111010
+    MOVWF   LATD
+    CALL    ENABLE
+    RETURN
+ LCD_CARACTER:
+    BSF	    RS; MODO CARACTER
+    CALL    LCD_DATO
+    CALL    Retardo_1ms
+    RETURN
+    
+ LCD_DATO
+    MOVWF   LCD_GUARDAR; = 0X28
+    MOVF    LCD_GUARDAR,W;
+    CALL    LCD_DATA
+    SWAPF   LCD_GUARDAR,W;
+    ; 0X28
+    ; SWAPF 0X82
+    ; W = 0X82
+    CALL    LCD_DATA
+    RETURN
+ LCD_DATA
+    ANDLW   B'11110000';		
+    ;         00101000
+    ;	 W =  00100000
+    MOVWF   DATO_LCD
+    MOVF    LATD,W; PUERTO D -> W
+    ; RD7       RD0
+    ; 0100 1111
+    ;W =      11001010
+    ANDLW   B'00001111';
+    ;0	    ;00001010
+    IORWF   DATO_LCD,W; 
+    ;W = 00001010 OR
+    ;DL  00110000
+    ;W = 00111010
+    MOVWF   LATD
+    CALL    ENABLE
+    RETURN
+    
+ LCD_LINEA1
+    ;W = 5
+    ADDLW   0X80; 80 + 5 = 85 
+    GOTO    LCD_CONFIG
+    RETURN
+ LCD_LINEA2
+    ADDLW   0XC0; C0 + W(8) = C8
+    GOTO    LCD_CONFIG
+    RETURN
+    
+ ENABLE:
+    CALL    Retardo_1ms
+    CALL    Retardo_1ms
+    BSF	    E
+    CALL    Retardo_1ms
+    BCF	    E
+    RETURN
+    
+Retardo_1ms:
+  ;MOVWF	    GUARDA_DATO
+  MOVLW	    .249
+  MOVWF	    VARIABLE_CUENTA
+BUCLE_INTERNO:
+  NOP
+  DECFSZ    VARIABLE_CUENTA, F
+  GOTO	    BUCLE_INTERNO
+  ;MOVF	    GUARDA_DATO,W
+  RETURN   

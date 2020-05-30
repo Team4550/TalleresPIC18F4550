@@ -1,0 +1,3 @@
+Warning[205] D:\ELECTRONICA\4550\TALLER-PIC18F4550\LCD.X\LCD_4BITS.INC 1 : Found directive in column 1. (CBLOCK)
+Message[313] D:\ELECTRONICA\4550\TALLER-PIC18F4550\LCD.X\LCD_4BITS.INC 1 : CBLOCK constants will start with a value of 0.
+Warning[205] D:\ELECTRONICA\4550\TALLER-PIC18F4550\LCD.X\LCD_4BITS.INC 7 : Found directive in column 1. (ENDC)
