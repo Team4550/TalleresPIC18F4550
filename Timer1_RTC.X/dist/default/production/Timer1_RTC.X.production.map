@@ -1,0 +1,97 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Tue Jun 02 16:11:36 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x000008    program   0x000004
+                   .org_2       code   0x000020    program   0x0001a8
+.config_300000_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300000    program   0x000001
+.config_300001_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300001    program   0x000001
+.config_300002_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300002    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300005    program   0x000001
+.config_300006_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300006    program   0x000001
+.config_300008_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300008    program   0x000001
+.config_300009_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x300009    program   0x000001
+.config_30000A_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000a    program   0x000001
+.config_30000B_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000b    program   0x000001
+.config_30000C_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000c    program   0x000001
+.config_30000D_BUILD/DEFAULT/PRODUCTION/PROGRAM    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x00000b      
+                            0x000020    0x0001c7      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            446 out of 33048 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+            BUCLE_INTERNO   0x0001bc    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                   ENABLE   0x0001a4    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 ENCENDER   0x0000dc    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                  FIN_INT   0x0000de    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                   INICIO   0x000020    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                INT_T1RTC   0x000088    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+              LCD_2LINEAS   0x00013c    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_BORRAR   0x000130    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+             LCD_CARACTER   0x000166    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+              LCD_COMANDO   0x000152    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_CONFIG   0x000142    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_DATA   0x000182    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_DATO   0x000172    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+           LCD_DISPLAY_ON   0x000136    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_INCR   0x00012a    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_INIT   0x0000e2    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_LINEA1   0x000194    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_LINEA2   0x00019c    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                  MUESTRO   0x0000b4    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+              Retardo_1ms   0x0001b6    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                    START   0x00006c    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+               TIMER1_RTC   0x000070    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+             _.org_2_008A   0x00008a    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+             _.org_2_0090   0x000090    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000020    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                    START   0x00006c    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+               TIMER1_RTC   0x000070    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                INT_T1RTC   0x000088    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+             _.org_2_008A   0x00008a    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+             _.org_2_0090   0x000090    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                  MUESTRO   0x0000b4    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                 ENCENDER   0x0000dc    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                  FIN_INT   0x0000de    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\Programa_principal.asm
+                 LCD_INIT   0x0000e2    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_INCR   0x00012a    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_BORRAR   0x000130    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+           LCD_DISPLAY_ON   0x000136    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+              LCD_2LINEAS   0x00013c    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_CONFIG   0x000142    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+              LCD_COMANDO   0x000152    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+             LCD_CARACTER   0x000166    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_DATO   0x000172    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                 LCD_DATA   0x000182    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_LINEA1   0x000194    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+               LCD_LINEA2   0x00019c    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+                   ENABLE   0x0001a4    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+              Retardo_1ms   0x0001b6    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+            BUCLE_INTERNO   0x0001bc    program     static D:\Electronica\4550\Taller-Pic18f4550\Timer1_RTC.X\LCD.INC
+
+
